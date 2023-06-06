@@ -356,7 +356,7 @@ module Control_Unit206(input[32-1:0] Instruction,
                     ALUSrc   = 0;
                     ALUCtr   = 5'b11111;
                     MemToReg = 0;
-                    RegWr    = 1;
+                    RegWr    = 0;
                     MemWr    = 0;
                     ExtOp    = 1'bX;
                     Rtype    = 1; 
