@@ -57,7 +57,6 @@ always @(negedge clk) begin
         $fdisplay(fd,"$|Reg%2d| %h |" ,i,u_CPU206.DataPath.Regfile.Register[i]);
     end
     $fdisplay(fd,"Memory Status:");
-    $fdisplay(fd,"Mem|0000_0015H| %h |" ,{u_CPU206.DataPath.DM_4K.DM[21+3],u_CPU206.DataPath.DM_4K.DM[21+2],u_CPU206.DataPath.DM_4K.DM[21+1],u_CPU206.DataPath.DM_4K.DM[21+0]});
     $fdisplay(fd,"Mem|0000_0014H| %h |" ,{u_CPU206.DataPath.DM_4K.DM[20+3],u_CPU206.DataPath.DM_4K.DM[20+2],u_CPU206.DataPath.DM_4K.DM[20+1],u_CPU206.DataPath.DM_4K.DM[20+0]});
     $fdisplay(fd,"Mem|0000_001CH| %h |" ,{u_CPU206.DataPath.DM_4K.DM[28+3],u_CPU206.DataPath.DM_4K.DM[28+2],u_CPU206.DataPath.DM_4K.DM[28+1],u_CPU206.DataPath.DM_4K.DM[28+0]});
    
