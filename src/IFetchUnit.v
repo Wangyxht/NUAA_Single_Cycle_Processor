@@ -1,6 +1,6 @@
 `include "PC.v"
 `include "NPC.v"
-`include "InstrucionMemory.v"
+`include "InstructionMemory.v"
 module IFetch_Unit206(input clk,          
                       input rst,
                       input Branch,       
