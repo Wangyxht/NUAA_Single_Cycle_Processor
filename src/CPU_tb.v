@@ -36,18 +36,8 @@ CPU206  u_CPU206 (
 
 integer i = 0;
 integer clk_num = 0;
-always @(negedge clk) begin
-    //$display("[clock %2d↓]:", i++);
-    //$display("$| PC  | %h |" ,{u_CPU206.DataPath.IFetchUnit.PC.I_Addr,2'b00});
-    //$display("#| IPC | %h |" ,u_CPU206.Instruction);
-    //$display("$|t0/08| %h |" ,u_CPU206.DataPath.Regfile.Register[8]);
-    //$display("$|t1/09| %h |" ,u_CPU206.DataPath.Regfile.Register[9]);
-    //$display("$|t2/10| %h |" ,u_CPU206.DataPath.Regfile.Register[10]);
-    //$display("$|t3/11| %h |" ,u_CPU206.DataPath.Regfile.Register[11]);
-    //$display("$|t4/12| %h |" ,u_CPU206.DataPath.Regfile.Register[12]);
-    //$display("$|t5/13| %h |" ,u_CPU206.DataPath.Regfile.Register[13]);
-    //$display("$|t6/14| %h |" ,u_CPU206.DataPath.Regfile.Register[14]);
-    //$display("M| 200 | %h |" ,{u_CPU206.DataPath.DM_4K.DM[203],u_CPU206.DataPath.DM_4K.DM[202],u_CPU206.DataPath.DM_4K.DM[201],u_CPU206.DataPath.DM_4K.DM[200]});
+always @(posedge clk) begin
+    #1;
     $fdisplay(fd,"-------------------------------------------");
     $fdisplay(fd,"[clock %2d↓]:", clk_num++);
     $fdisplay(fd,"#| IPC | %h |" ,u_CPU206.Instruction);
