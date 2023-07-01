@@ -45,7 +45,6 @@ module CPU206(input rst,
 
     Control_Unit206 ControlUnit( //指令控制单元（解码器）
         .Instruction(Instruction),  //指令输入
-        .clk(clk),
         .Branch(Branch),
         .Jump(Jump),
         .RegDst(RegDst),
