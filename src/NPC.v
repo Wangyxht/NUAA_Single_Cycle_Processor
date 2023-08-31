@@ -14,9 +14,7 @@ module NPC206(input Jump,
               output[31:2] I_Addr,
               output[31:2] Next_I_Addr);
     
-    wire[31:2] Next_I_Addr;
     wire[31:2] PC_Plus_4;
-    wire[31:2] I_Addr;
     wire[31:2] J_Addr;
     wire[31:2] B_Addr;
     wire[31:2] imm16_Ext;

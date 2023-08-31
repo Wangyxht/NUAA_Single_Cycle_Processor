@@ -1,35 +1,19 @@
 module Control_Unit206(input[32-1:0] Instruction,
-                       output Branch,
-                       output Jump,
-                       output RegDst,
-                       output ALUSrc,
-                       output[5-1:0] ALUCtr,
-                       output MemToReg,
-                       output RegWr,
-                       output MemWr,
-                       output[2-1:0] ExtOp,
-                       output Rtype,
-                       output Jal,
-                       output Rtype_J,
-                       output Rtype_L,
-                       output WrByte,
-                       output[2-1:0] LoadByte);
-    //控制信号
-    reg Branch;
-    reg Jump;
-    reg RegDst;
-    reg ALUSrc;
-    reg[5-1:0] ALUCtr;
-    reg MemToReg;
-    reg RegWr;
-    reg MemWr;
-    reg ExtOp;
-    reg Rtype;
-    reg Jal;
-    reg Rtype_J;
-    reg Rtype_L;
-    reg WrByte;
-    reg[2-1:0] LoadByte;
+                       output reg Branch,
+                       output reg Jump,
+                       output reg RegDst,
+                       output reg ALUSrc,
+                       output reg[5-1:0] ALUCtr,
+                       output reg MemToReg,
+                       output reg RegWr,
+                       output reg MemWr,
+                       output reg [2-1:0] ExtOp,
+                       output reg Rtype,
+                       output reg Jal,
+                       output reg Rtype_J,
+                       output reg Rtype_L,
+                       output reg WrByte,
+                       output reg[2-1:0] LoadByte);
 
     //指令分割
     wire[6-1:0] OP = Instruction[31:26];

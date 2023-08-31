@@ -35,8 +35,6 @@ module DataPath206(input clk,
     wire[32-1:0] busB;
     wire[32-1:0] busW;
 
-    //链接地址
-    wire[32-1:0] Link_Addr;
 
     //16位立即数（I型指令）
     wire[16-1:0] imm16;

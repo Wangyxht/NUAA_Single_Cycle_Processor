@@ -4,7 +4,7 @@ module IM_4K_206(input[11:2] Addr,            //指令地址
     assign Dout = IM[Addr];
     initial begin
         //$readmemh("Code_7.txt",IM);
-        $readmemb("Code_36.txt", IM);
+        $readmemb("./Code_36.txt",IM);
     end
 
 endmodule

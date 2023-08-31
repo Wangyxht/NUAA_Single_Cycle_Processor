@@ -2,16 +2,13 @@ module ALU206 (input[5-1:0] ALUCtr,     // ALU控制信号
                input[32-1:0] A,         // busA 
                input[32-1:0] B,         // B端信号
                input[5-1:0] shamt,      // 移位数
-               output[32-1:0] result,   // 输出结果
-               output OverFlow,         // 溢出标志
-               output Zero,             // 零标志
-               output Sign);            // 符号标志
+               output reg[32-1:0] result,   // 输出结果
+               output reg OverFlow,         // 溢出标志
+               output reg Zero,             // 零标志
+               output reg Sign);            // 符号标志
 
-    reg[32-1:0] result;
-    reg OverFlow = 0;
-    reg Zero = 0;
+
     reg[32:0] temp;
-    reg Sign;
     integer t1;
     integer t2;
 

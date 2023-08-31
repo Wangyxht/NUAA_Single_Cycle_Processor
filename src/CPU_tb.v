@@ -39,11 +39,12 @@ integer clk_num = 0;
 always @(posedge clk) begin
     #1;
     $fdisplay(fd,"-------------------------------------------");
-    $fdisplay(fd,"[clock %2d↓]:", clk_num++);
+    $fdisplay(fd,"[clock %2d↓]:", clk_num);
+    clk_num = clk_num + 1;
     $fdisplay(fd,"#| IPC | %h |" ,u_CPU206.Instruction);
     $fdisplay(fd,"$| PC  | %h |" ,{u_CPU206.DataPath.IFetchUnit.PC.I_Addr,2'b00});
     $fdisplay(fd,"Register Status:");
-    for(i = 0; i <= 31; ++i)begin
+    for(i = 0; i <= 31; i = i + 1)begin
         $fdisplay(fd,"$|Reg%2d| %h |" ,i,u_CPU206.DataPath.Regfile.Register[i]);
     end
     $fdisplay(fd,"Memory Status:");

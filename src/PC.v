@@ -1,8 +1,8 @@
 module PC206(input clk,
              input rst,
              input[31:2] Next_I_Addr,
-             output[31:2] I_Addr);
-    reg[31:2] I_Addr;
+             output reg[31:2] I_Addr);
+
     parameter Init_Addr =32'h0000_0000;
     always @(posedge clk) begin
         if (rst == 1) begin

@@ -4,8 +4,7 @@ module Branch_Control_Unit_206(input Branch,            ///跳转信号
                                input OverFlow,          //溢出标志
                                input[6-1:0] OP,         //指令OP域
                                input[5-1:0] BranchFlag, //跳转功能区分
-                               output BranchCtr);       //跳转控制信号
-    reg BranchCtr;
+                               output reg BranchCtr);       //跳转控制信号
     always @(*) begin
         if(Branch == 1'b1)begin
             case (OP)
